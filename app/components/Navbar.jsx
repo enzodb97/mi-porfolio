@@ -3,8 +3,17 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 const Navbar = () => {
+
+  const sideMenuRef = useRef();
+  const openMenu = ()=>{
+    sideMenuRef.current.style.transform = 'translateX(-16rem)'
+  }
+  const closeMenu = ()=>{
+    sideMenuRef.current.style.transform = 'translateX(16rem)'
+  }
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
@@ -60,7 +69,7 @@ const Navbar = () => {
               alt="Flecha de contacto"
             />{" "}
           </Link>
-          <button className="block lg:hidden ml-3">
+          <button className="block lg:hidden ml-3" onClick={openMenu}>
             <Image
               src={assets.menu_black}
               alt="menu modo dark"
@@ -69,21 +78,26 @@ const Navbar = () => {
           </button>
         </div>
         {/*Mobile menu */}
-        <ul className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-0 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500">
+        <ul ref={sideMenuRef} className="flex lg:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500">
+          <div className="absolute right-6 top-6" onClick={closeMenu}>
+            <Image src={assets.close_black} alt="boton para cerrar el navbar">
+
+            </Image>
+          </div>
           <li>
-            <Link href={"#top"}>Inicio</Link>
+            <Link href={"#top"}onClick={closeMenu}>Inicio</Link>
           </li>
           <li>
-            <Link href={"#about"}>Sobre mi</Link>
+            <Link href={"#about"}onClick={closeMenu}>Sobre mi</Link>
           </li>
           <li>
-            <Link href={"#Services"}>Servicios</Link>
+            <Link href={"#Services"}onClick={closeMenu}>Servicios</Link>
           </li>
           <li>
-            <Link href={"#work"}>Mis trabajos</Link>
+            <Link href={"#work"}onClick={closeMenu}>Mis trabajos</Link>
           </li>
           <li>
-            <Link href={"#contact"}>Contactar</Link>
+            <Link href={"#contact"}onClick={closeMenu}>Contactar</Link>
           </li>
         </ul>
       </nav>
