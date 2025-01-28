@@ -3,17 +3,36 @@
 import { assets } from "../assets/assets";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false); // Cambiado useEffect por useState
 
   const sideMenuRef = useRef();
-  const openMenu = ()=>{
-    sideMenuRef.current.style.transform = 'translateX(-16rem)'
-  }
-  const closeMenu = ()=>{
-    sideMenuRef.current.style.transform = 'translateX(16rem)'
-  }
+  const openMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(-16rem)";
+  };
+  const closeMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(16rem)";
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpiar el evento cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
@@ -23,7 +42,7 @@ const Navbar = () => {
           className="w-full"
         />
       </div>
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm":""}`}>
         <Link href={"/"}>
           <Image
             src={assets.logo}
@@ -78,26 +97,40 @@ const Navbar = () => {
           </button>
         </div>
         {/*Mobile menu */}
-        <ul ref={sideMenuRef} className="flex lg:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500">
+        <ul
+          ref={sideMenuRef}
+          className="flex lg:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500"
+        >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
-            <Image src={assets.close_black} alt="boton para cerrar el navbar">
-
-            </Image>
+            <Image
+              src={assets.close_black}
+              alt="boton para cerrar el navbar"
+            ></Image>
           </div>
           <li>
-            <Link href={"#top"}onClick={closeMenu}>Inicio</Link>
+            <Link href={"#top"} onClick={closeMenu}>
+              Inicio
+            </Link>
           </li>
           <li>
-            <Link href={"#about"}onClick={closeMenu}>Sobre mi</Link>
+            <Link href={"#about"} onClick={closeMenu}>
+              Sobre mi
+            </Link>
           </li>
           <li>
-            <Link href={"#Services"}onClick={closeMenu}>Servicios</Link>
+            <Link href={"#Services"} onClick={closeMenu}>
+              Servicios
+            </Link>
           </li>
           <li>
-            <Link href={"#work"}onClick={closeMenu}>Mis trabajos</Link>
+            <Link href={"#work"} onClick={closeMenu}>
+              Mis trabajos
+            </Link>
           </li>
           <li>
-            <Link href={"#contact"}onClick={closeMenu}>Contactar</Link>
+            <Link href={"#contact"} onClick={closeMenu}>
+              Contactar
+            </Link>
           </li>
         </ul>
       </nav>
