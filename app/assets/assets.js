@@ -80,7 +80,7 @@ export const workData = [
     {
         title: 'Frontend project',
         description: 'Web Design',
-        bgImage: '/work-1.png',
+        bgImage: '/work-1.jpg',
     },
     {
         title: 'Geo based app',

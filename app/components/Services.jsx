@@ -24,7 +24,7 @@ const Services = () => {
             <h3 className="text-lg my-4 text-gray-700">{title}</h3>
             <p className="text-sm text-gray-600 leading-5">{description}</p>
             <Link href={link} className="flex items-center gap-2 text-sm mt-5">
-              Read more <Image src={assets.right_arrow} className="w-4" />
+              Read more <Image src={assets.right_arrow} className="w-4" alt="right arrow" />
             </Link>
           </div>
         ))}
