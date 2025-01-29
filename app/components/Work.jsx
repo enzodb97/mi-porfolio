@@ -9,7 +9,7 @@ const Work = () => {
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Montserrat">
         Todos los trabajos hechos
       </p>
-    
+
       <div className="grid grid-cols-auto my-10 gap-5">
         {workData.map((project, index) => (
           <div
@@ -25,14 +25,18 @@ const Work = () => {
                 <h2 className="font-semibold">{project.title}</h2>
                 <p className="text-sm text-gray-700">{project.description}</p>
               </div>
-            </div>
-
-            <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2xp_0_#000] group-hover:bg-lime-300 transition">
-              <Image src={assets.send_icon} alt="send icon" className="w-5" />
+              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2xp_0_#000] group-hover:bg-lime-300 transition">
+                <Image src={assets.send_icon} alt="send icon" className="w-5" />
+              </div>
             </div>
           </div>
         ))}
       </div>
+      <a href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto
+      my-20 hover:bg-lightHover duration-500">
+        Show More <Image src={assets.right_arrow_bold} alt="right arrow" className="w-4"/>
+{/*MINUTO 1:50:50*/}
+      </a>
     </div>
   );
 };
