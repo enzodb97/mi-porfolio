@@ -50,7 +50,7 @@ const Navbar = () => {
             alt="Logo de Scriptal"
           />
         </Link>
-        <ul className="hidden lg:flex items-center gap-6 lg:gap8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul className={`hidden lg:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
           <li>
             <Link href={"#top"}>Inicio</Link>
           </li>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <Link href={"#about"}>Sobre mi</Link>
           </li>
           <li>
-            <Link href={"#Services"}>Servicios</Link>
+            <Link href={"#services"}>Servicios</Link>
           </li>
           <li>
             <Link href={"#work"}>Mis trabajos</Link>
@@ -118,7 +118,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href={"#Services"} onClick={closeMenu}>
+            <Link href={"#services"} onClick={closeMenu}>
               Servicios
             </Link>
           </li>
