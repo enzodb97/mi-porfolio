@@ -18,9 +18,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth ">
       <body
-        className={`${montserratFont.className} ${latoFont.className} antialiased leading-8 overflow-x-hidden`}
+        className={`${montserratFont.className} ${latoFont.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
         {children}
       </body>
