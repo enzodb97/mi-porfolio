@@ -36,13 +36,13 @@ if(isDarkMode){
 
   return (
     <>
-    <Navbar/>
-    <Header/>
-    <About/>
-    <Services/>
-    <Work/>
-    <Contact/>
-    <Footer/>
+    <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+    <Header isDarkMode={isDarkMode}/>
+    <About isDarkMode={isDarkMode}/>
+    <Services isDarkMode={isDarkMode}/>
+    <Work isDarkMode={isDarkMode}/>
+    <Contact isDarkMode={isDarkMode}/>
+    <Footer isDarkMode={isDarkMode}/>
     </>
   );
 }

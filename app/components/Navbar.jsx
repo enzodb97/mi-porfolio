@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({isDarkMode, setIsDarkMode}) => {
   const [isScroll, setIsScroll] = useState(false); // Cambiado useEffect por useState
 
   const sideMenuRef = useRef();
@@ -68,7 +68,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex items-center gap-4">
-          <button>
+          <button onClick={()=> setIsDarkMode(prev => !prev)}>
             <Image
               src={assets.moon_icon}
               alt="luna modo dark"
