@@ -1,5 +1,5 @@
-const { workData, assets } = require("../assets/assets");
-import Image from "next/image";
+import Image from 'next/image';
+import { workData, assets } from '../assets/assets';
 
 const Work = () => {
   return (
@@ -14,9 +14,15 @@ const Work = () => {
         {workData.map((project, index) => (
           <div
             key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-            style={{ backgroundImage: `url(${project.bgImage})` }}
+            className="aspect-square rounded-lg relative cursor-pointer group"
           >
+            <Image
+              src={project.bgImage}
+              alt={project.title}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
             <div
               className="bg-white w-10/12 rounded-md absolute bottom-5
             left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
@@ -32,10 +38,8 @@ const Work = () => {
           </div>
         ))}
       </div>
-      <a href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto
-      my-20 hover:bg-lightHover duration-500">
+      <a href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500">
         Show More <Image src={assets.right_arrow_bold} alt="right arrow" className="w-4"/>
-{/*MINUTO 1:50:50*/}
       </a>
     </div>
   );
