@@ -1,18 +1,44 @@
 import Image from 'next/image';
 import { workData, assets } from '../assets/assets';
-
+import { motion } from "motion/react"
 const Work = (isDarkMode) => {
   return (
-    <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-      <h4 className="text-center mb-2 text-lg font-Lato">Mi porfolio</h4>
-      <h2 className="text-center text-5xl font-Montserrat">Mis trabajos</h2>
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Montserrat">
-        Todos los trabajos hechos
-      </p>
+    <motion.div
+    initial={{opacity:0}}
+    whileInView={{opacity:1}}
+    transition={{duration:1}}
+    id="work" className="w-full px-[12%] py-10 scroll-mt-20">
+      <motion.h4 
+       initial={{y:-20, opacity: 0}}
+       whileInView={{y:0, opacity:1}}
+       transition={{duration:0.5, delay:0.3}}
+      className="text-center mb-2 text-lg font-Lato">Mi porfolio
 
-      <div className="grid grid-cols-auto my-10 gap-5 dark:text-black">
+      </motion.h4>
+      <motion.h2 
+      initial={{y:-20, opacity: 0}}
+      whileInView={{y:0, opacity:1}}
+      transition={{duration:0.5, delay:0.5}}
+      className="text-center text-5xl font-Montserrat">Mis trabajos
+
+      </motion.h2>
+      <motion.p 
+      initial={{opacity: 0}}
+      whileInView={{opacity:1}}
+      transition={{duration:0.5, delay:0.7}}
+      className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Montserrat">
+        Todos los trabajos hechos
+      </motion.p>
+
+      <motion.div 
+      initial={{opacity: 0}}
+      whileInView={{opacity:1}}
+      transition={{duration:0.6, delay:0.9}}
+      className="grid grid-cols-auto my-10 gap-5 dark:text-black">
         {workData.map((project, index) => (
-          <div
+          <motion.div
+          whileHover={{scale: 1.05}}
+          transition={{duration:0.3}}
             key={index}
             className="aspect-square rounded-lg relative cursor-pointer group"
           >
@@ -35,13 +61,17 @@ const Work = (isDarkMode) => {
                 <Image src={assets.send_icon} alt="send icon" className="w-5" />
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-      <a href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">
+      </motion.div>
+      <motion.a 
+      initial={{opacity: 0}}
+      whileInView={{opacity:1}}
+      transition={{duration:0.5, delay:1.1}}
+      href="" className="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">
         Show More <Image src={isDarkMode ? assets.right_arrow_bold  : assets.right_arrow_bold_dark } alt="right arrow" className="w-4"/>
-      </a>
-    </div>
+      </motion.a>
+    </motion.div>
   );
 };
 
