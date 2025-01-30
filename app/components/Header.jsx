@@ -29,7 +29,8 @@ const Header = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <Link
             href="#contact"
-            className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
+            className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2
+            dark:bg-transparent"
           >
             Contactame{" "}
             <Image
@@ -42,7 +43,7 @@ const Header = () => {
           <a
             href="/sample-resume.pdf"
             download
-            className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 "
+            className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
           >
             Mi Curriculum{" "}
             <Image src={assets.download_icon} alt="contact" className="w-4" />{" "}
