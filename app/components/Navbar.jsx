@@ -105,7 +105,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
           -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-blue-50 transition duration-500 dark:bg-darkHover dark:text-white">
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
-              src={assets.close_black}
+              src={isDarkMode ? assets.close_white : assets.close_black}
               alt="boton para cerrar el navbar"
             ></Image>
           </div>
