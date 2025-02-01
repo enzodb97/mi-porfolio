@@ -1,4 +1,4 @@
-import { assets, infoList, toolsData } from "../assets/assets";
+import { assets, infoList, toolsData, tools } from "../assets/assets";
 import Image from "next/image";
 import { motion } from "motion/react";
 const About = ({ isDarkMode }) => {
@@ -95,6 +95,28 @@ const About = ({ isDarkMode }) => {
             className="flex items-center gap-3 sm:gap-5"
           >
             {toolsData.map((tool, index) => (
+              <motion.li
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+                key={index}
+              >
+                <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
+              </motion.li>
+            ))}
+          </motion.ul>
+          <motion.h4
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="my-6 text-gray-700 font-Lato dark:text-white"
+          >
+            Lenguajes, Framework y Librerías
+          </motion.h4>
+          <motion.ul
+            whileInView={{ opacity: 1.1 }}
+            className="flex items-center gap-3 sm:gap-5"
+          >
+            {tools.map((tool, index) => (
               <motion.li
                 whileHover={{ scale: 1.05 }}
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"

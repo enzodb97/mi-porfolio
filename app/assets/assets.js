@@ -6,10 +6,11 @@ import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
-import firebase from './firebase.png';
-import figma from './figma.png';
+import intellij from './intellij.png';
+import postman from './postman.png';
 import git from './git.png';
-import mongodb from './mongodb.png';
+import jira from './jira.png';
+import confluence from './confluence.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logotype.png';
 import logo_dark from './logo_dark.png';
@@ -40,7 +41,20 @@ import work2 from './work-2.png';
 import work3 from './work-3.png';
 import work4 from './work-4.png';
 
+
+import java from './java.png'
+import spring from './spring.png'
+import nextjs from './nextjs.png'
+import react from './react.png'
+import tailwind from './tailwind.png'
+import mysql from './mysql.png'
 export const assets = {
+    react,
+    nextjs,
+    java,
+    mysql,
+    tailwind,
+    spring,
     user_image,
     code_icon,
     code_icon_dark,
@@ -49,10 +63,11 @@ export const assets = {
     project_icon,
     project_icon_dark,
     vscode,
-    firebase,
-    figma,
+    intellij,
+    postman,
+    jira,
     git,
-    mongodb,
+    confluence,
     right_arrow_white,
     logo,
     logo_dark,
@@ -104,10 +119,10 @@ export const workData = [
   ];
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Web App', description: 'Creamos y mantenemos aplicaciones web...', link: '' },
+    { icon: assets.mobile_icon, title: 'Test QA', description: 'Realizamos pruebas apra asegurar la calidad del sofware...', link: '' },
+    { icon: assets.ui_icon, title: 'Backend', description: 'Desarrollamos y mantenemos la lógica del lado del servidor...', link: '' },
+    { icon: assets.graphics_icon, title: 'Analista programador', description: 'Analizamos, diseñamos y desarrollamos soluciones de sofware...', link: '' },
 ]
 
 export const infoList = [
@@ -117,5 +132,8 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.intellij, assets.confluence, assets.postman, assets.git, assets.jira
+];
+export const tools =[
+assets.java,assets.spring ,assets.react, assets.nextjs, assets.tailwind, assets.mysql
 ];

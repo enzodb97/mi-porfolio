@@ -34,7 +34,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
+      className="w-full px-[12%] py-10 scroll-mt-20 bg-center bg-[length:90%_auto] dark:bg-none"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -50,8 +50,9 @@ const Contact = () => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="text-center text-5xl font-Montserrat"
       >
-        ¿Queres armar tu web?
+        Ponte en contacto conmigo
       </motion.h2>
+      {/*
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -59,7 +60,7 @@ const Contact = () => {
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Lato"
       >
         Hablemos
-      </motion.p>
+      </motion.p>*/}
 
       <motion.form
         initial={{ opacity: 0 }}

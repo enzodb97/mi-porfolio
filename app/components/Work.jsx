@@ -16,7 +16,7 @@ const Work = (isDarkMode) => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center mb-2 text-lg font-Lato"
       >
-        Mi porfolio
+        Porfiolio
       </motion.h4>
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
@@ -24,8 +24,9 @@ const Work = (isDarkMode) => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="text-center text-5xl font-Montserrat"
       >
-        Mis trabajos
+        Trabajos realizados
       </motion.h2>
+      {/* 
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -33,7 +34,7 @@ const Work = (isDarkMode) => {
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Lato"
       >
         Todos los trabajos hechos
-      </motion.p>
+      </motion.p>*/}
 
       <motion.div
         initial={{ opacity: 0 }}
