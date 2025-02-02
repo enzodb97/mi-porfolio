@@ -41,7 +41,7 @@ import work2 from './work-2.png';
 import work3 from './work-3.png';
 import work4 from './work-4.png';
 
-
+import bootstrap from './bootstrap.png'
 import java from './java.png'
 import spring from './spring.png'
 import nextjs from './nextjs.png'
@@ -52,6 +52,7 @@ export const assets = {
     react,
     nextjs,
     java,
+    bootstrap,
     mysql,
     tailwind,
     spring,
@@ -97,23 +98,23 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Cacaceasoc - Frontend',
+        description: 'Html, Css, Js y Bootstrap',
         bgImage: work1,
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'MdcLaboral - Frontend',
+        description: 'Html, Css, Js y Bootstrap',
         bgImage: work2,
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'filipa',
+        description: 'Next Js, Scss',
         bgImage: work3,
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'mi porfolio',
+        description: 'Next Js, Motion, Tailwind',
         bgImage: work4,
     },
   ];
@@ -135,5 +136,5 @@ export const toolsData = [
     assets.vscode, assets.intellij, assets.confluence, assets.postman, assets.git, assets.jira
 ];
 export const tools =[
-assets.java,assets.spring ,assets.react, assets.nextjs, assets.tailwind, assets.mysql
+assets.java,assets.spring ,assets.react, assets.nextjs, assets.tailwind, assets.bootstrap,assets.mysql
 ];

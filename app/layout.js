@@ -16,7 +16,6 @@ export const metadata = {
   description: "Desarrollador web en Scriptal - Especializado en creación de aplicaciones web y soluciones innovadoras.",
   keywords: "Enzo Bertolusso, desarrollador web, Scriptal, aplicaciones web, soluciones innovadoras, portafolio, desarrollo frontend, desarrollo backend",
   author: "Enzo Bertolusso",
-  viewport: "width=device-width, initial-scale=1.0",
   charset: "UTF-8",
   robots: "index, follow"
 };
