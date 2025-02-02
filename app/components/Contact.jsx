@@ -11,7 +11,7 @@ const Contact = () => {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", process.env.KEY_EMAIL_SECRET);
+    formData.append("access_key", process.env.NEXT_PUBLIC_KEY_EMAIL_SECRET);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -28,6 +28,7 @@ const Contact = () => {
       setResult(data.message);
     }
   };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -113,6 +114,7 @@ const Contact = () => {
         <p className="mt-4">{result}</p>
       </motion.form>
     </motion.div>
+    
   );
 };
 
