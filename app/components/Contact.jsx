@@ -113,6 +113,7 @@ const Contact = () => {
         </motion.button>
         <p className="mt-4">{result}</p>
       </motion.form>
+      
     </motion.div>
     
   );

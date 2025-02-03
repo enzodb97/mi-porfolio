@@ -123,18 +123,34 @@ export const workData = [
     },
   ];
 
-export const serviceData = [
-    { icon: assets.web_icon, title: 'Web App', description: 'Creamos y mantenemos aplicaciones web...', link: '' },
-    { icon: assets.mobile_icon, title: 'Test QA', description: 'Realizamos pruebas apra asegurar la calidad del sofware...', link: '' },
-    { icon: assets.ui_icon, title: 'Backend', description: 'Desarrollamos y mantenemos la lógica del lado del servidor...', link: '' },
-    { icon: assets.graphics_icon, title: 'Analista programador', description: 'Analizamos, diseñamos y desarrollamos soluciones de sofware...', link: '' },
-]
-
-export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Html, Css, JavaScript, React Js, Next Js, Java, Spring' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Educacion', description: 'Estudiante avanzado en Analista en Sistemas, Test QA manual, Backend Java, Frontend React Js' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Poroyectos', description: 'WEB APP' }
-];
+  export const serviceData = [
+    { icon: assets.web_icon, title: "Web App", description: "Creamos y mantenemos aplicaciones web funcionales y escalables.", link: "" },
+    { icon: assets.mobile_icon, title: "Test QA", description: "Realizamos pruebas exhaustivas para asegurar la calidad del software.", link: "" },
+    { icon: assets.ui_icon, title: "Backend", description: "Desarrollamos y mantenemos la lógica y los sistemas del lado del servidor.", link: "" },
+    { icon: assets.graphics_icon, title: "Analista programador", description: "Analizamos, diseñamos y desarrollamos soluciones de software a medida.", link: "" },
+  ];
+  
+  export const infoList = [
+    {
+      icon: assets.code_icon,
+      iconDark: assets.code_icon_dark,
+      title: "Languages",
+      description: "Dominio de Html, Css, JavaScript, React Js, Next Js, Java, y Spring. Experiencia en desarrollo frontend y backend."
+    },
+    {
+      icon: assets.edu_icon,
+      iconDark: assets.edu_icon_dark,
+      title: "Educación",
+      description: "Estudiante avanzado en Analista en Sistemas. Capacitado en Test QA manual, desarrollo Backend con Java, y desarrollo Frontend con React Js. Comprometido con el aprendizaje continuo."
+    },
+    {
+      icon: assets.project_icon,
+      iconDark: assets.project_icon_dark,
+      title: "Proyectos",
+      description: "Desarrollo de aplicaciones web modernas y escalables. Implementación de prácticas de prueba y aseguramiento de la calidad."
+    }
+  ];
+  
 
 export const toolsData = [
     assets.vscode, assets.intellij, assets.confluence, assets.postman, assets.git, assets.jira
