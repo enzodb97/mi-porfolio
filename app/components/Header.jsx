@@ -40,7 +40,7 @@ const Header = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          Soy un desarrollador web fullstack de Rosario, Argentina, con experiencia en lenguajes como Java y Next.js.Me apasiona crear soluciones digitales innovadoras y eficientes para mejorar la experiencia del usuario.
+          Soy un desarrollador web fullstack de Rosario, Argentina, con experiencia en lenguajes como Java y Next.js.&#32;Me apasiona crear soluciones digitales innovadoras y eficientes para mejorar la experiencia del usuario.
         </motion.p>
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <motion.a

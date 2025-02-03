@@ -52,11 +52,13 @@ const About = ({ isDarkMode }) => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex-1 mx-4 mt-4 lg:mt-0"
         >
-          <p className="mb-6 sm:mb-10 max-w-2xl font-Lato">
-            Soy estudiante avanzado de Analista de Sistemas y desarrollador web fullstack, con habilidades en lenguajes como React, Postgres, Next.js y Java.
-            Además, he finalizado cursos en Test QA manual, lo que me capacita para asegurar la calidad de mis desarrollos.
-            Mi objetivo es crear soluciones digitales que faciliten y mejoren la experiencia del usuario.
-          </p>
+   <p className="mb-6 sm:mb-10 max-w-2xl font-Lato">
+  Soy estudiante avanzado de Analista de Sistemas y desarrollador web fullstack, con habilidades en lenguajes como React, Postgres, Next.js y Java.&#32;
+  Además, he finalizado cursos en Test QA manual, lo que me capacita para asegurar la calidad de mis desarrollos.&#32;
+  Mi objetivo es crear soluciones digitales que faciliten y mejoren la experiencia del usuario.
+</p>
+
+
           <motion.ul
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
