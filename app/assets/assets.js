@@ -101,21 +101,25 @@ export const workData = [
         title: 'Cacaceasoc - Frontend',
         description: 'Html, Css, Js y Bootstrap',
         bgImage: work1,
+        link: 'http://cacaceasoc.com/',
     },
     {
         title: 'MdcLaboral - Frontend',
         description: 'Html, Css, Js y Bootstrap',
         bgImage: work2,
+        link: 'https://mdc-laboral.com/',
     },
     {
-        title: 'filipa',
+        title: 'Frontend - Filipa',
         description: 'Next Js, Scss',
         bgImage: work3,
+        link: '',
     },
     {
-        title: 'mi porfolio',
+        title: 'Frontend - Scriptal',
         description: 'Next Js, Motion, Tailwind',
         bgImage: work4,
+        link: '',
     },
   ];
 
