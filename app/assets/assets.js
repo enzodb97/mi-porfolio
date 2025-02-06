@@ -110,16 +110,16 @@ export const workData = [
         link: 'https://mdc-laboral.com/',
     },
     {
-        title: 'Frontend - Filipa',
-        description: 'Next Js, Scss',
+        title: 'Filipa - Frontend',
+        description: 'React, Motion, Tailwind',
         bgImage: work3,
-        link: '',
+        link: 'https://filipa-tau.vercel.app/',
     },
     {
-        title: 'Frontend - Scriptal',
+        title: 'Scriptal - Frontend',
         description: 'Next Js, Motion, Tailwind',
         bgImage: work4,
-        link: '',
+        link: 'https://porfolio-swart-phi.vercel.app/',
     },
   ];
 
